@@ -8,6 +8,8 @@ package sistemagestionempleados;
  *
  * @author USER
  */
+import javax.swing.SwingUtilities;
+import sistemagestionempleados.vista.VentanaEmpleados;
 public class Main {
 
     /**
@@ -15,6 +17,11 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        SwingUtilities.invokeLater(() -> {
+            VentanaEmpleados ventana = new VentanaEmpleados();
+            ventana.setVisible(true);
+        });
+        
     }
     
 }
